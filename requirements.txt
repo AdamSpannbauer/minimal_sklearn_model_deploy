@@ -1,6 +1,19 @@
-sklearn
+# For data manipulation
+# Used in: `model_build.py`, `server.py`, & `request_prediction.py`
 pandas
-numpy
+
+# For predictive model building
+# Used in: `model_build.py`
+sklearn
+
+# For serving model behind a REST API endpoint
+# Used in: `server.py`
 flask
-requests
+
+# For serving the model on Heroku
+# Used in: `Procfile`
 gunicorn
+
+# Requesting a prediction from the REST API
+# Used in: `request_prediction.py`
+requests
