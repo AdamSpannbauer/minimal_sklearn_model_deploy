@@ -1,11 +1,17 @@
 import requests
 import pandas as pd
 
-url = "http://localhost:5555/predict"
+# If running server locally on port 5555:
+# url = "http://localhost:5555/predict"
 
+# If running server remotely at `frozen-island-12625.herokuapp.com`
+url = "http://frozen-island-12625.herokuapp.com/predict"
+
+# Load data from file and sample records for prediction
 df = pd.read_csv("data/penguins.csv")
 df = df.sample(2)
 
+# Separate input features and target
 X = df.drop(columns="species")
 y = df["species"]
 
@@ -26,11 +32,13 @@ data = {"data": X.to_dict(orient="records")}
 #     ]
 # }
 
+# Request a prediction from the model REST API
 response = requests.post(url, json=data)
 predictions = response.json()
 
-# Example response:
+# Example predictions:
 # {"predictions": ["Chinstrap", "Gentoo"]}
 
+# Display predictions and correct labels
 print(f"\nRight answer(s): {y.tolist()}")
 print(f"Prediction(s): {predictions['predictions']}")

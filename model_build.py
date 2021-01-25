@@ -14,11 +14,13 @@ MODEL_OUTPUT_PATH = "saved_model.pkl"
 print("Reading and prepping data...")
 df = pd.read_csv("data/penguins.csv")
 
+# Separating features by data type
 num_cols = ["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"]
 bin_cols = ["is_male"]
 cat_cols = ["island"]
 drop_cats = ["Biscoe"]
 
+# Separate input features and target -> train/test split
 X = df.drop(columns="species")
 y = df["species"]
 
@@ -26,6 +28,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
+# Setup up modeling pipeline and fit with grid search
 print("Defining Pipeline...")
 preprocessing = ColumnTransformer(
     [
@@ -57,6 +60,8 @@ print(f"\tTest score: {pipeline_cv.score(X_test, y_test):.4f}")
 print(f"\tBest params: {pipeline_cv.best_params_}")
 
 
+# Extract best estimator from GridSearchCV object
+# and save as a pickled file.
 print(f"\nSaving model to '{MODEL_OUTPUT_PATH}'...")
 best_model = pipeline_cv.best_estimator_
 with open(MODEL_OUTPUT_PATH, "wb") as f:
