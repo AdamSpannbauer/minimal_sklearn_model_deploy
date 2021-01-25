@@ -1,6 +1,6 @@
 # minimal_sklearn_model_deploy 🤖🧠☁️
 
-Who is this for
+Who is this for:
 
 * 🙋 You know how to build and save `sklearn` models
 * 🙋‍♀️ You have a [Heroku](https://www.heroku.com/) account (or you 1 minute spare time to create one)
