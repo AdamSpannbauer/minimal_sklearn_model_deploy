@@ -1,3 +1,6 @@
+# Read more about requirements files here:
+# https://note.nkmk.me/en/python-pip-install-requirements/
+
 # For data manipulation
 # Used in: `model_build.py`, `server.py`, & `request_prediction.py`
 pandas
