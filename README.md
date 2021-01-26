@@ -59,7 +59,7 @@ How [Heroku](https://www.heroku.com/) will know how to serve your model.  In thi
 
 Lists out the requirements for your project (package names and versions).  [This is a good resource](https://note.nkmk.me/en/python-pip-install-requirements/) for more.
 
-Note, your project doesn't need to be a deployed model for this file to be useful.  Whenever starting a new project, I like to have this item on my getting started TODO list.
+Note, your project doesn't need to be a deployed model for this file to be useful.  Whenever starting a new project, I like to have this item on my getting started TODO list.  See another `requirements.txt` example in this [`minimal_python_package`](https://github.com/AdamSpannbauer/minimal_python_package) repo.
 
 ### Data files
 
@@ -70,4 +70,8 @@ Pickled model file created by [`model_build.py`](model_build.py).  See [`pickle`
 #### [`data/penguins.csv`](data/penguins.csv)
 
 The example data used to build a predictive model to predict a penguin's species.  The data is [source](https://github.com/mwaskom/seaborn-data/blob/master/penguins.csv)d from the [`seaborn`](https://seaborn.pydata.org/index.html) package.
+
+### More content like this
+
+* [`minimal_python_package`](https://github.com/AdamSpannbauer/minimal_python_package)
 
