@@ -3,7 +3,7 @@
 Who is this for:
 
 * 🙋 You know how to build and save `sklearn` models
-* 🙋‍♀️ You have a [Heroku](https://www.heroku.com/) account (or you 1 minute spare time to create one)
+* 🙋‍♀️ You have a [Heroku](https://www.heroku.com/) account (or you have 1 minute spare time to create one)
 * 🙋‍♂️ You want to know how to deploy an sklearn model as a REST API and you're more of a doer than a reader
 
 README Outline:
